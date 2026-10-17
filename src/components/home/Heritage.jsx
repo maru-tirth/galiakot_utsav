@@ -69,10 +69,10 @@ export function Heritage() {
 
             <Reveal as="p" delay={120}>
               Our Ganeshotsav is known across the neighbourhood as{" "}
-              <strong className="font-semibold text-crimson">
-                Chembur Cha Aadidev
-              </strong>
-              , and our Navratri Utsav is the oldest in Chembur. Between them
+              <strong lang="mr" className="font-semibold text-crimson">
+                {site.taglineDeva}
+              </strong>{" "}
+              ({site.tagline}), and our Navratri Utsav is the oldest in Chembur. Between them
               they have drawn generations of families to the same ground, year
               after year.
             </Reveal>

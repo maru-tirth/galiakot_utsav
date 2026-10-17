@@ -11,6 +11,12 @@ export const site = {
   nameMarathi: "गलियाकोट सांस्कृतिक उत्सव मंडळ",
   shortName: "Galiakot Mandal",
   initials: "GSUM",
+  /**
+   * The mandal's name for its Ganpati, as it appears on the official emblem.
+   * `tagline` is the transliteration — kept for page titles, meta tags and
+   * search, where Devanagari would not be what devotees type.
+   */
+  taglineDeva: "चेंबुरचा आदिदेव",
   tagline: "Chembur Cha Aadidev",
   taglineMeaning: "the Primordial Deity of Chembur",
   taglineMarathi: "श्रद्धा, परंपरा आणि एकतेचा उत्सव",
@@ -31,6 +37,20 @@ export const site = {
 
   /** PLACEHOLDER — replace once the production domain is registered. */
   url: "https://www.galiakotmandal.org",
+};
+
+/**
+ * The mandal's song, offered on the homepage.
+ *
+ * PLACEHOLDER: the composer / singer credit is not yet confirmed — see
+ * ASSETS.md. Add it to `credit` once the committee supplies it.
+ */
+export const mandalSong = {
+  src: "/audio/chembur_cha_adidev.mp3",
+  title: "चेंबुरचा आदिदेव",
+  titleLang: "mr",
+  subtitle: "The mandal's song",
+  credit: null,
 };
 
 export const socialLinks = [

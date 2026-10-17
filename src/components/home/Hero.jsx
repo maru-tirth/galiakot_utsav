@@ -37,13 +37,19 @@ export function Hero() {
 
           <h1
             id="hero-title"
+            lang="mr"
             className="display-1 mt-5 text-ivory text-balance"
           >
-            Chembur Cha
-            <span className="block text-gold">Aadidev</span>
+            चेंबुरचा
+            <span className="block text-gold">आदिदेव</span>
           </h1>
 
-          <p className="font-deva mx-auto mt-6 max-w-lg text-xl leading-relaxed text-gold-soft/85 sm:text-2xl lg:mx-0">
+          {/* The transliteration, for readers who do not read Devanagari. */}
+          <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-ivory/55">
+            {site.tagline}
+          </p>
+
+          <p className="font-deva mx-auto mt-5 max-w-lg text-xl leading-relaxed text-gold-soft/85 sm:text-2xl lg:mx-0">
             {site.taglineMarathi}
           </p>
 

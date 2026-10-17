@@ -142,7 +142,9 @@ export function Lightbox({ items, index, onClose, onIndexChange }) {
       </div>
 
       <div className="shrink-0 px-4 py-5 text-center sm:px-6">
-        <p className="font-display text-lg text-ivory">{item.caption}</p>
+        <p lang={item.captionLang} className="font-display text-lg text-ivory">
+          {item.caption}
+        </p>
         <p className="mt-1 text-xs text-ivory/45">
           {item.placeholder
             ? "Placeholder image — the mandal's own photograph awaited"

@@ -9,6 +9,8 @@ import Reveal from "./Reveal";
 export function SectionHeading({
   eyebrow,
   title,
+  titleId, // target for the section's aria-labelledby
+  titleLang, // e.g. "mr" — switches the title to the Devanagari face
   lede,
   tone = "dark", // "dark" = on maroon, "light" = on ivory
   align = "left",
@@ -40,6 +42,8 @@ export function SectionHeading({
 
       <Reveal delay={60}>
         <Heading
+          id={titleId}
+          lang={titleLang}
           className={cn(
             "display-2 text-balance",
             onDark ? "text-ivory" : "text-charcoal",

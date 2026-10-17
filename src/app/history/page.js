@@ -45,10 +45,10 @@ export default function HistoryPage() {
 
               <Reveal as="p" delay={70}>
                 The Ganeshotsav is known locally as{" "}
-                <strong className="font-semibold text-crimson">
-                  Chembur Cha Aadidev
-                </strong>
-                . Each year the Aagman Sohala brings the murti through the
+                <strong lang="mr" className="font-semibold text-crimson">
+                  {site.taglineDeva}
+                </strong>{" "}
+                ({site.tagline}). Each year the Aagman Sohala brings the murti through the
                 streets accompanied by the dhol-tasha pathak, followed by the
                 Sthapana Puja, days of darshan and aarti, the Mahaprasad, and
                 finally the Visarjan.
@@ -88,7 +88,11 @@ export default function HistoryPage() {
                 />
               </div>
               <figcaption className="mt-3 text-[0.6875rem] uppercase tracking-[0.16em] text-charcoal-soft/60">
-                Chembur Cha Aadidev, Aagman Sohala
+                {/* Devanagari takes neither the uppercasing nor the tracking. */}
+                <span lang="mr" className="text-[0.8125rem] normal-case">
+                  {site.taglineDeva}
+                </span>
+                , Aagman Sohala
               </figcaption>
             </figure>
 

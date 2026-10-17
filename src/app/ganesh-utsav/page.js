@@ -15,8 +15,9 @@ export default function GaneshUtsavPage() {
     <>
       <PageHero
         eyebrow="Ganesh Utsav"
-        title="Chembur Cha Aadidev"
-        lede="From the first beat of the dhol at the Aagman to the farewell at the water, these are the days that define the mandal's year."
+        title={site.taglineDeva}
+        titleLang="mr"
+        lede={`${site.tagline} — from the first beat of the dhol at the Aagman to the farewell at the water, these are the days that define the mandal's year.`}
         image="/images/aagman-01.jpg"
         imageAlt=""
       />

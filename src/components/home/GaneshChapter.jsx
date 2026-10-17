@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Play, Clock } from "lucide-react";
 import { ganeshPillars } from "@/data/festivals";
 import { darshanStatus } from "@/data/announcements";
-import { films, lastConfirmedAagman } from "@/data/site";
+import { films, lastConfirmedAagman, site } from "@/data/site";
 import { Button } from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -26,8 +26,9 @@ export function GaneshChapter() {
           as="h2"
           tone="light"
           eyebrow="Ganesh Utsav"
-          title="Chembur Cha Aadidev"
-          lede="From the Aagman Sohala to the final farewell, the Utsav is the heart of the mandal's year."
+          title={site.taglineDeva}
+          titleLang="mr"
+          lede={`${site.tagline} — from the Aagman Sohala to the final farewell, the Utsav is the heart of the mandal's year.`}
           align="center"
           divider
         />

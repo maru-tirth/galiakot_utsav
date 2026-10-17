@@ -21,7 +21,7 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr]">
           <div>
             <div className="flex items-center gap-3">
-              <Logo className="h-12 w-12" />
+              <Logo tone="gold" className="h-12 w-12" />
               <div>
                 <p className="font-display text-xl font-semibold leading-tight text-ivory">
                   {site.name}

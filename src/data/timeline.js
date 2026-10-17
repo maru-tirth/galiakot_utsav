@@ -42,8 +42,9 @@ export const timeline = [
   },
   {
     year: "Today",
-    title: "Chembur Cha Aadidev",
-    body: "The mandal continues to bring devotees together each year through Ganesh Utsav, the oldest Navratri Utsav in Chembur, and its activities through the year.",
+    title: "चेंबुरचा आदिदेव",
+    titleLang: "mr",
+    body: "Chembur Cha Aadidev — the mandal continues to bring devotees together each year through Ganesh Utsav, the oldest Navratri Utsav in Chembur, and its activities through the year.",
     confirmed: true,
   },
 ];

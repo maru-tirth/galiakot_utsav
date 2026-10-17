@@ -115,7 +115,12 @@ export function SiteHeader() {
             className="group flex min-w-0 items-center gap-3"
             aria-label={`${site.name} — home`}
           >
-            <Logo className="h-10 w-10 transition-transform duration-500 group-hover:rotate-[8deg]" />
+            {/* Gold tone: the emblem's saffron linework is too fine to read
+                against the maroon header. */}
+            <Logo
+              tone="gold"
+              className="h-10 w-10 transition-transform duration-500 group-hover:rotate-[8deg]"
+            />
             <span className="min-w-0">
               <span className="block truncate font-display text-[1.0625rem] font-semibold leading-tight text-ivory">
                 Galiakot <span className="text-gold">Mandal</span>

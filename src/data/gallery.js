@@ -20,13 +20,24 @@ export const galleryCategories = [
   { id: "community", label: "Community" },
 ];
 
-const g = (id, src, w, h, category, caption, alt, placeholder = false) => ({
+const g = (
+  id,
+  src,
+  w,
+  h,
+  category,
+  caption,
+  alt,
+  placeholder = false,
+  captionLang, // "mr" where the caption is Devanagari
+) => ({
   id,
   src,
   width: w,
   height: h,
   category,
   caption,
+  captionLang,
   alt,
   placeholder,
 });
@@ -34,8 +45,9 @@ const g = (id, src, w, h, category, caption, alt, placeholder = false) => ({
 export const galleryItems = [
   // ---------- Darshan (authentic) ----------
   g("darshan-idol", "/images/darshan-idol.jpg", 1920, 1080, "darshan",
-    "Chembur Cha Aadidev",
-    "Close view of the mandal's Ganpati murti, crowned in gold and framed by lotus garlands"),
+    "चेंबुरचा आदिदेव",
+    "Close view of the mandal's Ganpati murti, crowned in gold and framed by lotus garlands",
+    false, "mr"),
   g("darshan-wide", "/images/darshan-wide.jpg", 1920, 1080, "darshan",
     "The murti on its float",
     "The mandal's murti carried on its float through the streets of Chembur in daylight"),

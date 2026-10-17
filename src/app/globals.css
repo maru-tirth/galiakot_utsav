@@ -90,6 +90,38 @@ body {
   font-family: var(--font-deva);
 }
 
+/*
+  Anything marked `lang="mr"` renders in Mukta — Cormorant and Inter carry no
+  Devanagari, and the Latin tracking we set elsewhere collapses conjuncts.
+*/
+:lang(mr) {
+  font-family: var(--font-deva);
+  letter-spacing: normal;
+}
+
+/*
+  Devanagari stacks a matra above the shirorekha and a vowel sign below the
+  baseline, so a line occupies roughly 1.35em before any leading at all. The
+  Latin display leading (0.96–1.12) collides outright; these give the two
+  zones clearance without the lines drifting apart.
+*/
+.display-1:lang(mr) {
+  line-height: 1.5;
+}
+
+.display-2:lang(mr) {
+  line-height: 1.45;
+}
+
+.display-3:lang(mr) {
+  line-height: 1.45;
+}
+
+/* Mukta sets optically smaller than Inter — nudge inline Marathi back level. */
+.prose-body :lang(mr) {
+  font-size: 1.06em;
+}
+
 /* Eyebrow / small-caps label used above section headings */
 .eyebrow {
   font-family: var(--font-sans);
@@ -236,6 +268,52 @@ body {
   transform: none;
 }
 
+/*
+  Timeline entries arrive from their own side of the spine. Only once the
+  two columns exist — below `sm` every entry is left-aligned, and alternating
+  directions there would just read as noise.
+*/
+@media (min-width: 40rem) {
+  [data-reveal][data-from="left"] {
+    transform: translate3d(-32px, 14px, 0);
+  }
+
+  [data-reveal][data-from="right"] {
+    transform: translate3d(32px, 14px, 0);
+  }
+}
+
+/* The node settles onto the spine just after its entry has started moving. */
+.tl-node {
+  opacity: 0;
+  transform: scale(0.35);
+  transition:
+    opacity 0.45s var(--ease-out-soft),
+    transform 0.6s var(--ease-out-soft);
+  transition-delay: calc(var(--reveal-delay, 0ms) + 140ms);
+}
+
+[data-reveal="in"] .tl-node {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Song player equalizer. */
+@keyframes gk-eq {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.eq-bar {
+  transform-origin: bottom;
+  animation: gk-eq 900ms ease-in-out infinite;
+}
+
 @keyframes gk-float {
   0%,
   100% {
@@ -297,7 +375,8 @@ body {
     transition-duration: 0.001ms !important;
   }
 
-  [data-reveal] {
+  [data-reveal],
+  .tl-node {
     opacity: 1 !important;
     transform: none !important;
   }

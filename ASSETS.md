@@ -60,10 +60,15 @@ Once replaced, set `placeholder: false` on that entry in `src/data/gallery.js` a
 
 ## 3. Still needed from the mandal
 
-- **Official logo / emblem** (vector preferred). The current mark is a hand-drawn brass medallion placeholder in `src/components/ui/Logo.jsx`.
+- **The emblem in vector form (SVG/AI/EPS).** The supplied raster has been keyed
+  to transparency as `public/images/logo.png` (512px) — good to ~96px on screen,
+  but a vector would sharpen the fine Devanagari linework and print cleanly.
 - **Archival photographs** from the mandal's earlier decades, for the History page.
-- **A favicon** derived from the official emblem.
 - **An Open Graph share image** (1200×630) if you want something other than the hero.
+- **The credit for the mandal's song** (`public/audio/chembur_cha_adidev.mp3`) —
+  composer, singer, and confirmation that the mandal holds the right to publish
+  it. Set `credit` on `mandalSong` in `src/data/site.js` once supplied; the
+  player is built to show it.
 
 ---
 

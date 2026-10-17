@@ -112,7 +112,10 @@ export function MediaGallery({
                 />
 
                 <span className="absolute inset-x-0 bottom-0 p-3 text-left">
-                  <span className="block font-display text-sm font-semibold leading-tight text-ivory sm:text-base">
+                  <span
+                    lang={item.captionLang}
+                    className="block font-display text-sm font-semibold leading-tight text-ivory sm:text-base"
+                  >
                     {item.caption}
                   </span>
                   {item.placeholder ? (
