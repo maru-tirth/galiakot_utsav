@@ -1,26 +1,314 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ==========================================================================
+   Galiakot Heritage — Design Tokens
+   Devotion Through Generations
+   ========================================================================== */
+
+@theme {
+  /* --- Brand palette --- */
+  --color-void: #1a080c; /* deepest cinematic ground */
+  --color-maroon: #310e14; /* primary dark surface */
+  --color-crimson: #7e151c; /* dark-section accent */
+  --color-vermilion: #a51f24; /* primary CTA only */
+  --color-saffron: #e6a23c; /* Navratri key, warm highlight */
+  --color-gold: #d6ae58; /* ornament, rules, small caps */
+  --color-gold-soft: #e8cf95; /* readable gold on dark */
+  --color-ivory: #fff8ec; /* readable content surface */
+  --color-ivory-dim: #f3e8d6; /* ivory, one step down */
+  --color-charcoal: #211b1b; /* body text on ivory */
+  --color-charcoal-soft: #5a4b47; /* secondary text on ivory */
+
+  /* --- Radii --- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* --- Shadows --- */
+  --shadow-lift: 0 18px 40px -24px rgba(26, 8, 12, 0.55);
+  --shadow-deep: 0 40px 80px -40px rgba(26, 8, 12, 0.8);
+
+  /* --- Easing --- */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-cormorant), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-deva: var(--font-mukta), var(--font-inter), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+:root {
+  --header-h: 72px;
+}
+
+* {
+  min-width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-maroon);
+}
+
+/* Visible, brand-consistent focus ring everywhere */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.on-dark :focus-visible {
+  outline-color: var(--color-gold-soft);
+}
+
+/* ==========================================================================
+   Typography helpers
+   ========================================================================== */
+
+.font-deva {
+  font-family: var(--font-deva);
+}
+
+/* Eyebrow / small-caps label used above section headings */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Fluid display scale */
+.display-1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 0.96;
+  letter-spacing: -0.015em;
+  font-size: clamp(2.75rem, 1.4rem + 6.4vw, 7rem);
+}
+
+.display-2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  font-size: clamp(2rem, 1.3rem + 3.1vw, 3.75rem);
+}
+
+.display-3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.12;
+  font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem);
+}
+
+.lede {
+  font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.prose-body p {
+  line-height: 1.75;
+  max-width: 62ch;
+}
+
+.prose-body p + p {
+  margin-top: 1.1em;
+}
+
+/* ==========================================================================
+   Surfaces
+   ========================================================================== */
+
+/* Deep cinematic band with warm lamplight falloff — not a flat gradient */
+.surface-dark {
+  background-color: var(--color-maroon);
+  color: var(--color-ivory);
+  position: relative;
+  isolation: isolate;
+}
+
+.surface-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      70% 55% at 50% 12%,
+      rgba(214, 174, 88, 0.16) 0%,
+      rgba(214, 174, 88, 0) 68%
+    ),
+    radial-gradient(
+      90% 90% at 50% 120%,
+      rgba(26, 8, 12, 0.95) 0%,
+      rgba(26, 8, 12, 0) 60%
+    );
+  pointer-events: none;
+}
+
+.surface-void {
+  background-color: var(--color-void);
+  color: var(--color-ivory);
+}
+
+.surface-light {
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+/* Warmer key reserved for Navratri */
+.surface-navratri {
+  background-color: #2a0a10;
+  color: var(--color-ivory);
+  position: relative;
+  isolation: isolate;
+}
+
+.surface-navratri::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      60% 50% at 18% 8%,
+      rgba(230, 162, 60, 0.26) 0%,
+      rgba(230, 162, 60, 0) 65%
+    ),
+    radial-gradient(
+      55% 50% at 86% 95%,
+      rgba(165, 31, 36, 0.4) 0%,
+      rgba(165, 31, 36, 0) 60%
+    );
+  pointer-events: none;
+}
+
+/* Hairline rule used between bands */
+.rule-gold {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(214, 174, 88, 0.45) 22%,
+    rgba(214, 174, 88, 0.45) 78%,
+    transparent
+  );
+}
+
+/* ==========================================================================
+   Motion — scroll reveal (driven by IntersectionObserver)
+   ========================================================================== */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 0.85s var(--ease-out-soft),
+    transform 0.85s var(--ease-out-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal="in"] {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes gk-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gk-scroll-cue {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(130%);
+    opacity: 0;
+  }
+}
+
+@keyframes gk-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(214, 174, 88, 0.08) 25%,
+    rgba(214, 174, 88, 0.2) 50%,
+    rgba(214, 174, 88, 0.08) 75%
+  );
+  background-size: 200% 100%;
+  animation: gk-shimmer 1.6s linear infinite;
+}
+
+/* ==========================================================================
+   Reduced motion — the "Static" experience tier
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Utility: hide scrollbar on horizontal filmstrips while keeping scroll */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
