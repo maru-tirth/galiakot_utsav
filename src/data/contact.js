@@ -11,8 +11,9 @@ export const contactDetails = [
     id: "venue",
     label: "Utsav Venue",
     value: null,
-    awaiting: "The exact venue address within the Galiakot Estate precinct is awaiting confirmation from the committee.",
-    hint: "Chembur, Mumbai, Maharashtra",
+    awaiting:
+      "The street address and map pin for Galiakot Estate are awaiting confirmation. We will not publish an unverified pin.",
+    hint: "Galiakot Estate, Chembur, Mumbai, Maharashtra",
   },
   {
     id: "phone",
@@ -23,8 +24,8 @@ export const contactDetails = [
   {
     id: "email",
     label: "Email",
-    value: null,
-    awaiting: "An official email address has not yet been supplied.",
+    value: "gkutsav.1958@gmail.com",
+    href: "mailto:gkutsav.1958@gmail.com",
   },
   {
     id: "social",

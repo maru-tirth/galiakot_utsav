@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { communityActivities } from "@/data/festivals";
+import { communityActivities, yearRoundActivities } from "@/data/festivals";
 import { Button } from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -91,6 +91,23 @@ export function Community() {
             </Reveal>
           </ul>
         </div>
+
+        {/* Observances kept outside the two major festivals */}
+        <Reveal className="mt-16 border-t border-charcoal/10 pt-12">
+          <h3 className="eyebrow text-crimson">Through the year</h3>
+          <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {yearRoundActivities.map((item, i) => (
+              <Reveal as="li" key={item.id} delay={i * 80}>
+                <h4 className="font-display text-lg font-semibold text-charcoal">
+                  {item.title}
+                </h4>
+                <p className="mt-1.5 text-sm leading-relaxed text-charcoal-soft">
+                  {item.body}
+                </p>
+              </Reveal>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </section>
   );

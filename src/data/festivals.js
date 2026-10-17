@@ -16,27 +16,44 @@ export const ganeshPillars = [
   {
     id: "sthapana",
     title: "Sthapana Puja",
-    body: "The installation of the murti, the first aarti, and the Mahaprasad shared with every devotee who comes.",
+    body: "The Prana Pratishtha on the first morning, followed by the Maha Prasad shared with every devotee who comes.",
     image: "/images/puja-03.jpg",
     href: "/gallery?category=puja",
     linkLabel: "View the puja",
   },
   {
     id: "darshan",
-    title: "Ganpati Darshan",
-    body: "Days of continuous darshan and aarti, as devotees from across Chembur come to stand before the murti.",
+    title: "Darshan & Maha Aarti",
+    body: "Ten days of continuous darshan, with Maha Aarti each morning and evening, as devotees from across Chembur come to stand before the murti.",
     image: "/images/darshan-idol.jpg",
     href: "/ganesh-utsav#darshan",
     linkLabel: "Darshan information",
   },
   {
     id: "visarjan",
-    title: "Visarjan",
-    body: "The farewell procession to the water, and the promise carried by every devotee — Ganpati Bappa Morya, pudhchya varshi lavkar ya.",
+    title: "Visarjan Yatra",
+    body: "On the final day, the farewell procession moves through the neighbourhood roads toward the immersion point — Ganpati Bappa Morya, pudhchya varshi lavkar ya.",
     image: "/images/visarjan-01.jpg",
     href: "/gallery?category=visarjan",
     linkLabel: "View Visarjan",
     placeholderImage: true,
+  },
+];
+
+/**
+ * Observances the mandal keeps outside the two major festivals.
+ * Supplied as draft copy — descriptive only, no dates claimed.
+ */
+export const yearRoundActivities = [
+  {
+    id: "holika",
+    title: "Holika Dahan",
+    body: "The spring bonfire, kept each year as a rite of renewal and neighbourly gathering.",
+  },
+  {
+    id: "sunderkand",
+    title: "Sunderkand Path & Bhajans",
+    body: "Recitations and devotional singing held through the year, keeping the community together between the major festivals.",
   },
 ];
 
@@ -56,7 +73,7 @@ export const navratriEvents = [
   {
     id: "chowki",
     title: "Mata Ki Chowki",
-    body: "A devotional evening of bhajan and jagran in honour of the Mother Goddess.",
+    body: "Devotional singing and classical music in honour of the Mother Goddess — traditional hymns through the evening.",
     schedule: "Date announced before each Navratri",
   },
   {
@@ -64,6 +81,12 @@ export const navratriEvents = [
     title: "Daily Aarti",
     body: "Morning and evening aarti through all nine days of the Utsav.",
     schedule: "Timings announced before each Navratri",
+  },
+  {
+    id: "dussehra",
+    title: "Dussehra",
+    body: "The concluding ceremonies, marking the victory of good over evil through community gathering and recitation.",
+    schedule: "Date announced before each Navratri",
   },
 ];
 

@@ -12,6 +12,7 @@ export const site = {
   shortName: "Galiakot Mandal",
   initials: "GSUM",
   tagline: "Chembur Cha Aadidev",
+  taglineMeaning: "the Primordial Deity of Chembur",
   taglineMarathi: "श्रद्धा, परंपरा आणि एकतेचा उत्सव",
   established: 1958,
   locality: "Chembur, Mumbai, Maharashtra",
@@ -38,21 +39,21 @@ export const socialLinks = [
     label: "Instagram",
     handle: "@gk_utsav1958",
     href: "https://www.instagram.com/gk_utsav1958/",
-    description: "Festival moments, announcements and daily darshan images.",
+    description: "Reels, daily decoration updates and live event announcements.",
   },
   {
     id: "facebook",
     label: "Facebook",
     handle: "galiakot.1958",
     href: "https://www.facebook.com/galiakot.1958/",
-    description: "Community updates and event notices for devotees.",
+    description: "Our media archive — photo collections and albums from past years.",
   },
   {
     id: "youtube",
     label: "YouTube",
     handle: "Festival films",
     href: "https://www.youtube.com/watch?v=JtxXbPl2ulE",
-    description: "Aagman Sohala and festival films from our celebrations.",
+    description: "Video coverage of the Aagman Sohala and the Utsav.",
   },
 ];
 
