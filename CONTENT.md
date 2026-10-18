@@ -35,10 +35,7 @@ These render as visible, deliberately-styled empty states rather than being gues
 
 | Item | Where it appears | File to edit |
 |---|---|---|
-| Venue address | Contact section + Contact page | `contact.js` → `contactDetails[0].value` |
-| Map pin | Contact section | `contact.js` → `mapEmbed.enabled = true` + `src` |
 | Phone number | Contact | `contact.js` |
-| Email address | Contact | `contact.js` |
 | Upcoming festival dates | Announcement strip, Darshan panel | `announcements.js` |
 | Darshan timings | Darshan panel | `announcements.js` → `darshanStatus` |
 | Navratri dates and timings | Navratri section | `festivals.js` → `navratriEvents[].schedule` |
@@ -72,7 +69,7 @@ export const darshanStatus = {
 
 Set `confirmed: true` and the entry moves from the dimmed "awaiting" style to the full gold style.
 
-**Turn the map on** — set `mapEmbed.enabled = true` in `contact.js` and paste the Google Maps embed `src`. Only do this once the exact venue is confirmed.
+**The map is on.** `mapEmbed` in `contact.js` holds the embed `src`, the short Google Maps `link` used by the "Open in Google Maps" caption, and the address `label`. The pin marks Galiakot Wala Road itself rather than a building number, and the address line is worded to match.
 
 ---
 

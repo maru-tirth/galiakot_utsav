@@ -11,9 +11,8 @@ import PetalField from "./PetalField";
  * Composition rule: the murti is the only fully-lit object in the frame.
  * Nothing overlays it — ornament surrounds, text sits beside it.
  *
- * The hero image is the mandal's OWN murti, taken from the Aagman Sohala
- * 2023 film. Replace with a higher-resolution still when the mandal's
- * photographer supplies one — same near-square crop, ≥1600px.
+ * The hero image is the mandal's own murti, photographed during Ganesh
+ * Utsav 2026.
  */
 export function Hero() {
   return (
@@ -98,9 +97,9 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-t-[14rem] rounded-b-sm">
               <Image
                 src="/images/hero-idol.jpg"
-                alt="Chembur Cha Aadidev — the mandal's Ganpati murti lit against the night sky during the Aagman Sohala"
-                width={1240}
-                height={1050}
+                alt="Chembur Cha Aadidev — the mandal's Ganpati murti of 2026, garlanded on its dais"
+                width={1012}
+                height={1800}
                 priority
                 sizes="(max-width: 1024px) 92vw, 46vw"
                 className="h-auto w-full object-cover"
@@ -114,7 +113,7 @@ export function Hero() {
             </div>
 
             <figcaption className="mt-4 text-center text-[0.6875rem] uppercase tracking-[0.18em] text-ivory/35">
-              Aagman Sohala · Film by Beyond Thought Films
+              Ganesh Utsav 2026 · Galiakot Sanskrutik Utsav Mandal
             </figcaption>
           </figure>
         </div>

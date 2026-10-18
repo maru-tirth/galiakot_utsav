@@ -2,67 +2,91 @@
 
 All images live in `public/images/`. To replace one, **drop a new file in with the same filename** — nothing else needs to change. Then update the `alt` text in `src/data/gallery.js` so it describes the new photograph.
 
+Every photograph on the site is the mandal's own, from **Ganesh Utsav 2026** and **Navratri 2026**. No stock or licensed third-party imagery remains anywhere on the site.
+
 ---
 
-## 1. Authentic mandal photography (29 files)
+## 1. Where the photographs came from
 
-These are frame stills from the mandal's **own** festival films. They show our murti, our pathak, our devotees, our street.
+They were taken from the mandal's shared Drive folder:
 
-| Source film | YouTube |
+| Folder | Contents |
 |---|---|
-| *Chembur Cha Adidev — Aagman Sohala 2023* | `JtxXbPl2ulE` |
-| *Aagman Sohala 2022* | `nIDjI3UXUs4` |
-| *Sthapana Puja & Mahaprasad* | `ANe0YONWPJk` |
+| *Ganpati Agman 2026* (root) | 40 photographs, 98 clips |
+| *Day 1 – Day 11 (Ganesh Utsav 2026)* | 66 photographs, 64 clips |
+| *Navratri 2026 (from day 5)* | 1 photograph, 51 clips |
 
-All three films are **produced by Beyond Thought Films**. The site credits them visibly in the hero caption, the film cards, the lightbox and the footer.
+Two kinds of still are in use, and `asset-sources.json` records which is which for every file, down to the original filename and Drive file id:
 
-> **Action for the committee:** confirm with Beyond Thought Films that the mandal may use stills from these films on its official website, or replace them with the mandal's own photographs. Until that is confirmed, treat them as provisional.
+- **15 photographs** — the HEIC/JPEG originals, converted to JPEG.
+- **22 video frames** — real frames pulled from the mandal's own clips. These carry most of the Navratri coverage, because the Navratri folder is almost entirely video. They are genuine moments, but a still camera would resolve them better.
+
+> **Worth knowing:** these photographs show recognisable members of the community, including children. That is normal for a mandal's own website, but the committee should be comfortable publishing them before the site goes live.
+
+## 2. What each file shows
 
 | File | Shows |
 |---|---|
-| `hero-idol.jpg` | **The hero.** Our murti lit against the night sky during Aagman |
-| `darshan-idol.jpg` | Close view of the murti's face, gold crown, lotus garlands |
-| `darshan-wide.jpg` | The murti on its float in daylight |
-| `heritage-main.jpg` | The procession beneath the Chembur flyover |
-| `heritage-detail.jpg` | The painted eye and trishul tilak |
-| `aagman-01.jpg` … `aagman-06.jpg` | Aagman: night float, petals, volunteers, dhol-tasha pathak, saffron flag, tasha |
-| `dhol-01.jpg` | Close view of the dhol |
-| `crowd-01.jpg`, `crowd-02.jpg` | Devotees celebrating in the street |
-| `puja-01.jpg` … `puja-06.jpg` | Sthapana Puja: installation, offering, aarti, eye detail, Mahaprasad |
-| `community-01.jpg` … `community-03.jpg` | The gathered community; a child watching the procession |
-| `decor-01.jpg` | The decorated mandap at night |
-| `idol-detail-01.jpg` … `idol-detail-03.jpg` | Crown and lotus, red-and-gold shela, jewels before the procession |
-| `pathak-bw-01.jpg`, `pathak-bw-02.jpg` | The pathak before the procession (black and white) |
+| `hero-idol.jpg` | **The hero.** Our 2026 murti, garlanded, with the mandal's name board |
+| `darshan-idol.jpg` | The murti's face — painted eyes, trishul tilak, the Om |
+| `darshan-wide.jpg` | The mandap, draped red and white, the murti on its dais |
+| `idol-detail-01/02/03.jpg` | The Om in the palm; the damru; crown and trunk |
+| `heritage-main.jpg` | The lane at night as the Aagman approaches |
+| `heritage-detail.jpg` | The murti garlanded in marigold beside the name board |
+| `aagman-01.jpg` … `aagman-06.jpg` | The Aagman: the lit float, the lane, sparklers, a flare |
+| `dhol-01.jpg`, `pathak-bw-02.jpg` | The dhol-tasha pathak beside the murti |
+| `crowd-01.jpg`, `crowd-02.jpg` | Volunteers celebrating; three young volunteers |
+| `puja-01.jpg` … `puja-06.jpg` | The aarti, folded hands, darshan, and the Mahaprasad kitchen |
+| `pathak-bw-01.jpg` | The puja being performed (black and white) |
+| `community-01.jpg` … `community-04.jpg` | The volunteers, the neighbourhood, the elders of the mandal |
+| `decor-01.jpg` | The draped canopy of the mandap |
+| `navratri-01.jpg` … `navratri-06.jpg` | Garba in the lane, dandiya, the stage, the lit street |
+| `visarjan-01.jpg` | **Standing in** — see below |
 
-A machine-readable record of every file, its source film and its alt text is in **`asset-sources.json`**.
+## 3. The one gap: Visarjan
 
-**Recommended upgrade:** ask the mandal's photographer for the original high-resolution stills, especially for `hero-idol.jpg`. The current hero is 1240×1050 — adequate, but a native photograph would be sharper on large screens.
+The Drive folder contains no photography of the Visarjan itself. `visarjan-01.jpg` is therefore an authentic 2026 procession photograph standing in for it, and is still labelled "Placeholder" on the Visarjan card and in the gallery — the label now means *"real mandal photograph, wrong event"*, not *"stock image"*.
 
----
-
-## 2. Placeholder photography (7 files) — replace these
-
-No mandal footage exists yet for Navratri or Visarjan, so these are **licensed stand-ins from Wikimedia Commons** (CC BY-SA 4.0 / CC BY 2.0). They are visibly labelled "Placeholder" in the gallery, on the Visarjan card, and under the Navratri image grid.
-
-| File | Needed instead | Suggested crop |
-|---|---|---|
-| `navratri-01.jpg` | Our Garba circle in full flow | 16:9 landscape |
-| `navratri-02.jpg` | Devotees dancing Garba under the lights | 3:2 landscape |
-| `navratri-03.jpg` | The full Navratri ground / crowd | 3:2 landscape |
-| `navratri-04.jpg` | Dancers in traditional dress | portrait |
-| `navratri-05.jpg` | Our decorated Navratri ground at dusk | 3:2 landscape |
-| `navratri-06.jpg` | Chaniya choli / mirror-work detail | 16:9 landscape |
-| `visarjan-01.jpg` | Our Visarjan procession | 3:2 landscape |
-
-Once replaced, set `placeholder: false` on that entry in `src/data/gallery.js` and remove `placeholderImage: true` from the Visarjan card in `src/data/festivals.js`. The "Placeholder" badges then disappear automatically.
+When Visarjan photographs arrive, drop one in as `visarjan-01.jpg`, set `placeholder: false` in `src/data/gallery.js`, and remove `placeholderImage: true` from the Visarjan card in `src/data/festivals.js`. The badge disappears on its own.
 
 ---
 
-## 3. Still needed from the mandal
+## 4. Video (`public/video/`)
+
+Nine clips from the mandal's own 2026 footage are served from this site — no
+YouTube, no Drive embed, nothing that breaks if the Drive folder's sharing
+changes. They appear on the Gallery page under **Moments from 2026**.
+
+The originals are iPhone `.MOV` (HEVC), which most browsers will not play and
+which run to tens of megabytes each — 288 MB for these nine. Each was
+transcoded to H.264 MP4 at long edge 1080, with `faststart` so playback begins
+before the file has finished arriving: **26 MB for all nine**, between 6 and 40
+seconds each. Posters are a real frame taken one second in, so no card opens on
+a black lead-in.
+
+Nothing downloads until someone presses play — the players carry
+`preload="none"`, verified in the browser. Starting one clip pauses any other.
+
+`asset-sources.json` records every clip's original filename, Drive file id,
+duration and weight alongside the photographs.
+
+To add or replace a clip, drop an MP4 and a matching `.jpg` poster into
+`public/video/` and add an entry to `mandalClips` in `src/data/gallery.js`.
+Keep clips short — every megabyte here is paid for by someone on mobile data.
+
+The three longer **Beyond Thought Films** productions remain as YouTube links
+in the section below the clips. They are the mandal's own festival films, and
+are credited on screen.
+
+---
+
+## 5. Still needed from the mandal
 
 - **The emblem in vector form (SVG/AI/EPS).** The supplied raster has been keyed
   to transparency as `public/images/logo.png` (512px) — good to ~96px on screen,
   but a vector would sharpen the fine Devanagari linework and print cleanly.
+- **Photographs of the Visarjan** — the only part of the Utsav with no
+  photography of its own (see section 3).
 - **Archival photographs** from the mandal's earlier decades, for the History page.
 - **An Open Graph share image** (1200×630) if you want something other than the hero.
 - **The credit for the mandal's song** (`public/audio/chembur_cha_adidev.mp3`) —

@@ -3,7 +3,6 @@ import PageHero from "@/components/layout/PageHero";
 import Navratri from "@/components/home/Navratri";
 import MediaGallery from "@/components/gallery/MediaGallery";
 import SectionHeading from "@/components/ui/SectionHeading";
-import AwaitingNote from "@/components/ui/AwaitingNote";
 import Reveal from "@/components/ui/Reveal";
 
 export const metadata = {
@@ -34,12 +33,6 @@ export default function NavratriPage() {
             align="center"
             divider
           />
-
-          <AwaitingNote tone="light" className="mx-auto mt-8 max-w-2xl">
-            The images below are licensed placeholders. The mandal&rsquo;s own
-            Navratri photographs will replace them — see ASSETS.md for the
-            filenames to drop in.
-          </AwaitingNote>
 
           <Reveal className="mt-12">
             <MediaGallery initialCategory="navratri" showFilter={false} />

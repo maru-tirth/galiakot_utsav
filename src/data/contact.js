@@ -8,12 +8,16 @@
 
 export const contactDetails = [
   {
+    /**
+     * Supplied by the mandal. The pin marks Galiakot Wala Road itself, not a
+     * building number — the address line says exactly that rather than
+     * implying a precision the pin does not have.
+     */
     id: "venue",
     label: "Utsav Venue",
-    value: null,
-    awaiting:
-      "The street address and map pin for Galiakot Estate are awaiting confirmation. We will not publish an unverified pin.",
-    hint: "Galiakot Estate, Chembur, Mumbai, Maharashtra",
+    value: "Galiakot Wala Rd, Chembur, Mumbai, Maharashtra 400074",
+    href: "https://maps.app.goo.gl/QVS6xhtAVwXkeSpeA",
+    external: true,
   },
   {
     id: "phone",
@@ -37,10 +41,12 @@ export const contactDetails = [
 ];
 
 /**
- * Map embed is disabled until the venue is confirmed — a wrong pin sends
- * devotees to the wrong place, which is worse than no map at all.
+ * The venue map, as supplied by the mandal. `link` is the short Google Maps
+ * URL for "open in the app / get directions"; `src` is the embed iframe.
  */
 export const mapEmbed = {
-  enabled: false,
-  src: null,
+  enabled: true,
+  src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5235325628028!2d72.89325287547473!3d19.0407060530791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8ab212bd847%3A0x464299a44fa5ada0!2sGaliakot%20Wala%20Rd%2C%20Chembur%2C%20Mumbai%2C%20Maharashtra%20400074!5e0!3m2!1sen!2sin!4v1792316178798!5m2!1sen!2sin",
+  link: "https://maps.app.goo.gl/QVS6xhtAVwXkeSpeA",
+  label: "Galiakot Wala Rd, Chembur, Mumbai, Maharashtra 400074",
 };

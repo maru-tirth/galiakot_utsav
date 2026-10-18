@@ -33,6 +33,8 @@ export const ganeshPillars = [
     id: "visarjan",
     title: "Visarjan Yatra",
     body: "On the final day, the farewell procession moves through the neighbourhood roads toward the immersion point — Ganpati Bappa Morya, pudhchya varshi lavkar ya.",
+    // Authentic 2026 procession photography standing in — the Visarjan
+    // itself has not been photographed yet. See ASSETS.md.
     image: "/images/visarjan-01.jpg",
     href: "/gallery?category=visarjan",
     linkLabel: "View Visarjan",

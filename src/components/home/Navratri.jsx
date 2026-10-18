@@ -65,31 +65,31 @@ export function Navratri() {
               <div className="space-y-4 pt-10">
                 <Figure
                   src="/images/navratri-01.jpg"
-                  alt="Dancers moving in a wide Garba circle on a decorated festival ground"
+                  alt="The lane filled with Garba dancers, the lit stage at the far end"
                   ratio="aspect-3/4"
                 />
                 <Figure
                   src="/images/navratri-06.jpg"
-                  alt="Close view of traditional mirror-work Garba attire"
+                  alt="The decorated Navratri stage lit in blue and green"
                   ratio="aspect-4/3"
                 />
               </div>
               <div className="space-y-4">
                 <Figure
                   src="/images/navratri-05.jpg"
-                  alt="A Navratri ground decorated with canopies of hanging lights at dusk"
+                  alt="Dandiya sticks meeting under the coloured lights of the Utsav"
                   ratio="aspect-4/3"
                 />
                 <Figure
                   src="/images/navratri-02.jpg"
-                  alt="Devotees dancing Garba under strings of festival lights"
+                  alt="Families in festival dress walking the decorated lane during Navratri"
                   ratio="aspect-3/4"
                 />
               </div>
             </div>
 
             <p className="mt-5 text-center text-[0.625rem] uppercase tracking-[0.16em] text-ivory/30">
-              Placeholder photography — the mandal&rsquo;s own Navratri images awaited
+              Navratri 2026 · Galiakot Sanskrutik Utsav Mandal
             </p>
           </Reveal>
         </div>

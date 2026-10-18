@@ -15,26 +15,26 @@ export function Heritage() {
       <div className="mx-auto grid max-w-[1400px] gap-12 px-4 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-20">
         {/* Image, framed and offset */}
         <Reveal className="relative order-2 lg:order-1">
-          <div className="relative overflow-hidden rounded-sm shadow-[var(--shadow-deep)]">
+          {/* The slot fixes its own ratio so the layout holds whatever shape
+              the mandal's photograph arrives in. */}
+          <div className="relative aspect-4/5 overflow-hidden rounded-sm shadow-[var(--shadow-deep)]">
             <Image
               src="/images/heritage-main.jpg"
-              alt="The mandal's Aagman procession moving through the streets of Chembur"
-              width={1920}
-              height={1080}
+              alt="The neighbourhood lane at night, lined with devotees as the Aagman approaches"
+              fill
               sizes="(max-width: 1024px) 92vw, 46vw"
-              className="h-full w-full object-cover"
+              className="object-cover"
             />
           </div>
 
           {/* Inset detail image, overlapping — the asymmetry */}
-          <div className="absolute -bottom-8 -right-4 hidden w-40 overflow-hidden rounded-sm border-4 border-ivory shadow-[var(--shadow-lift)] sm:block lg:-right-10 lg:w-52">
+          <div className="absolute -bottom-8 -right-4 hidden aspect-square w-40 overflow-hidden rounded-sm border-4 border-ivory shadow-[var(--shadow-lift)] sm:block lg:-right-10 lg:w-52">
             <Image
               src="/images/heritage-detail.jpg"
-              alt="Detail of the murti's painted eye and trishul tilak"
-              width={1920}
-              height={1080}
+              alt="The murti garlanded in marigold, the mandal's name board beside it"
+              fill
               sizes="208px"
-              className="h-full w-full object-cover"
+              className="object-cover"
             />
           </div>
 

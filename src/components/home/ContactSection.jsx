@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, AtSign } from "lucide-react";
+import { MapPin, Phone, Mail, AtSign, Navigation } from "lucide-react";
 import { contactDetails, mapEmbed } from "@/data/contact";
 import { site } from "@/data/site";
 import { Button } from "@/components/ui/Button";
@@ -24,13 +24,13 @@ export function ContactSection() {
             as="h2"
             eyebrow="Visit & Contact"
             title="Come for darshan"
-            lede={`The mandal celebrates in ${site.locality}. Confirmed venue and contact details will be published here as soon as the committee supplies them.`}
+            lede={`The Utsav is held on Galiakot Wala Road in ${site.locality} — the map below marks the lane.`}
           />
 
           <AwaitingNote className="mt-8 max-w-xl">
-            We have deliberately not published an address or phone number
-            that has not been verified — a wrong pin sends devotees to the
-            wrong place.
+            An official telephone number has not been supplied yet, so none is
+            published here — a number that has not been verified is worse than
+            none. Until then, email or Instagram reach the mandal.
           </AwaitingNote>
 
           <Reveal delay={150} className="mt-9">
@@ -92,15 +92,32 @@ export function ContactSection() {
           </dl>
 
           {mapEmbed.enabled && mapEmbed.src ? (
-            <div className="mt-6 aspect-video overflow-hidden rounded-sm border border-gold/20">
-              <iframe
-                src={mapEmbed.src}
-                title={`Map showing ${site.name}`}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-full w-full border-0"
-              />
-            </div>
+            <figure className="mt-6">
+              <div className="aspect-video overflow-hidden rounded-sm border border-gold/20">
+                <iframe
+                  src={mapEmbed.src}
+                  title={`Map showing ${mapEmbed.label ?? site.name}`}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className="h-full w-full border-0"
+                />
+              </div>
+
+              {mapEmbed.link ? (
+                <figcaption className="mt-3">
+                  <a
+                    href={mapEmbed.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-6 items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-gold/80 underline decoration-gold/30 underline-offset-4 transition-colors hover:text-gold"
+                  >
+                    <Navigation size={13} aria-hidden="true" />
+                    Open in Google Maps
+                  </a>
+                </figcaption>
+              ) : null}
+            </figure>
           ) : (
             <div className="mt-6 flex aspect-video items-center justify-center rounded-sm border border-dashed border-gold/25 px-6 text-center">
               <p className="text-xs leading-relaxed text-ivory/45">

@@ -28,7 +28,7 @@ export function Community() {
             <div className="relative aspect-4/5 overflow-hidden rounded-sm">
               <Image
                 src="/images/puja-03.jpg"
-                alt="A young devotee performing the aarti before the murti"
+                alt="The Mahaprasad being cooked in the mandal's kitchen"
                 fill
                 sizes="(max-width: 1024px) 46vw, 28vw"
                 className="object-cover"
@@ -37,7 +37,7 @@ export function Community() {
             <div className="relative mt-10 aspect-4/5 overflow-hidden rounded-sm">
               <Image
                 src="/images/community-03.jpg"
-                alt="A child watching the mandal's procession pass"
+                alt="Senior members of the mandal standing together beside the murti"
                 fill
                 sizes="(max-width: 1024px) 46vw, 28vw"
                 className="object-cover"

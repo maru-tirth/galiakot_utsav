@@ -89,10 +89,9 @@ export function SiteFooter() {
           </div>
 
           <p className="mt-6 text-[0.6875rem] leading-relaxed text-ivory/30">
-            Festival photographs are stills from the mandal&rsquo;s own
-            Aagman Sohala and Sthapana Puja films by Beyond Thought Films.
-            Navratri and Visarjan images are licensed placeholders pending
-            the mandal&rsquo;s own photographs — see ASSETS.md.
+            All photography on this site is the mandal&rsquo;s own, from Ganesh
+            Utsav 2026 and Navratri 2026. The festival films are by Beyond
+            Thought Films.
           </p>
         </div>
       </div>

@@ -147,8 +147,8 @@ export function Lightbox({ items, index, onClose, onIndexChange }) {
         </p>
         <p className="mt-1 text-xs text-ivory/45">
           {item.placeholder
-            ? "Placeholder image — the mandal's own photograph awaited"
-            : "Galiakot Sanskrutik Utsav Mandal · Film by Beyond Thought Films"}
+            ? "Mandal photography, standing in until this event is photographed"
+            : "Galiakot Sanskrutik Utsav Mandal · 2026"}
         </p>
       </div>
     </div>

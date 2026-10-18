@@ -1,13 +1,14 @@
 /**
  * Media gallery.
  *
- * Images marked `placeholder: false` are AUTHENTIC Galiakot Sanskrutik
- * Utsav Mandal photographs, taken from the mandal's own festival films
- * (Beyond Thought Films). They show our own murti, pathak and devotees.
+ * Every photograph here is the mandal's own, from Ganesh Utsav 2026 and
+ * Navratri 2026. Images sourced from the mandal's video footage are marked
+ * `fromFootage: true` — they are real frames of real moments, flagged only
+ * so the committee knows which ones a still camera could improve on.
  *
- * Images marked `placeholder: true` are licensed stand-ins used only where
- * no mandal footage exists yet (Navratri and Visarjan). Replace them with
- * the mandal's own photographs — see ASSETS.md.
+ * `placeholder: true` now means one thing only: the photograph is authentic
+ * mandal content but is standing in for an event not yet photographed.
+ * See ASSETS.md.
  */
 
 export const galleryCategories = [
@@ -43,121 +44,153 @@ const g = (
 });
 
 export const galleryItems = [
-  // ---------- Darshan (authentic) ----------
-  g("darshan-idol", "/images/darshan-idol.jpg", 1920, 1080, "darshan",
+  // ---------- Ganpati Darshan ----------
+  g("darshan-idol", "/images/darshan-idol.jpg", 1800, 1350, "darshan",
     "चेंबुरचा आदिदेव",
-    "Close view of the mandal's Ganpati murti, crowned in gold and framed by lotus garlands",
+    "Close view of the mandal's Ganpati murti — the painted eyes, the trishul tilak and the Om on the forehead",
     false, "mr"),
-  g("darshan-wide", "/images/darshan-wide.jpg", 1920, 1080, "darshan",
-    "The murti on its float",
-    "The mandal's murti carried on its float through the streets of Chembur in daylight"),
-  g("idol-detail-01", "/images/idol-detail-01.jpg", 1920, 1080, "darshan",
-    "Crown and lotus",
-    "The murti's golden crown and lotus-framed shoulders"),
-  g("idol-detail-02", "/images/idol-detail-02.jpg", 1920, 1080, "darshan",
-    "Draped in red and gold",
-    "The murti draped in a red and gold shela during the procession"),
-  g("idol-detail-03", "/images/idol-detail-03.jpg", 1920, 1080, "darshan",
-    "Adorned before the procession",
-    "The murti adorned with jewels before the Aagman procession begins"),
-  g("heritage-detail", "/images/heritage-detail.jpg", 1920, 1080, "darshan",
-    "The trishul tilak",
-    "Detail of the murti's painted eye and trishul tilak"),
+  g("darshan-wide", "/images/darshan-wide.jpg", 1800, 1350, "darshan",
+    "The mandap",
+    "The mandal's mandap, red and white draped and strung with lights, the murti installed on its dais"),
+  g("idol-detail-03", "/images/idol-detail-03.jpg", 1350, 1800, "darshan",
+    "Crown and trunk",
+    "The murti's golden crown and curved trunk seen from the side"),
+  g("idol-detail-01", "/images/idol-detail-01.jpg", 1800, 1350, "darshan",
+    "The Om in the palm",
+    "An open blue palm on the murti's backdrop, the Om painted at its centre"),
+  g("idol-detail-02", "/images/idol-detail-02.jpg", 1800, 1350, "darshan",
+    "The damru",
+    "A hand of the murti's backdrop holding a small damru"),
+  g("heritage-detail", "/images/heritage-detail.jpg", 1013, 1800, "darshan",
+    "Garlanded",
+    "The murti garlanded in marigold, the mandal's name board beside it"),
 
-  // ---------- Aagman (authentic) ----------
-  g("aagman-01", "/images/aagman-01.jpg", 1920, 1080, "aagman",
+  // ---------- Aagman Sohala ----------
+  g("aagman-01", "/images/aagman-01.jpg", 1013, 1800, "aagman",
     "Aagman Sohala, by night",
-    "The mandal's murti on its float, illuminated at night during the Aagman Sohala"),
-  g("aagman-05", "/images/aagman-05.jpg", 1920, 1080, "aagman",
-    "Beneath the saffron flag",
-    "The murti beneath a saffron flag as the night procession passes"),
-  g("aagman-02", "/images/aagman-02.jpg", 1920, 1080, "aagman",
-    "Petals over the procession",
-    "Flower petals and confetti thrown over the Aagman procession"),
-  g("aagman-04", "/images/aagman-04.jpg", 1920, 1080, "aagman",
-    "The dhol-tasha pathak",
-    "The dhol-tasha pathak playing during the Aagman Sohala"),
-  g("aagman-06", "/images/aagman-06.jpg", 1920, 1080, "aagman",
-    "Tasha raised",
-    "Tasha cymbals raised above the procession at night"),
-  g("dhol-01", "/images/dhol-01.jpg", 1920, 1080, "aagman",
-    "The dhol",
-    "Close view of the dhol being played during the procession"),
-  g("aagman-03", "/images/aagman-03.jpg", 1920, 1080, "aagman",
+    "The mandal's murti on its float, lit against the night as the Aagman moves through the lane"),
+  g("aagman-06", "/images/aagman-06.jpg", 1600, 900, "aagman",
+    "Bappa comes home",
+    "The murti on its float during the Aagman procession at night"),
+  g("aagman-02", "/images/aagman-02.jpg", 1600, 900, "aagman",
+    "Carried through the lane",
+    "Volunteers accompanying the murti on its float through the neighbourhood"),
+  g("aagman-05", "/images/aagman-05.jpg", 1350, 1800, "aagman",
+    "Sparklers before Bappa",
+    "Sparklers burning in front of the murti during the Aagman Sohala"),
+  g("aagman-04", "/images/aagman-04.jpg", 1013, 1800, "aagman",
+    "A flare in the lane",
+    "A flare held up in the street, the lane lit red, during the procession"),
+  g("dhol-01", "/images/dhol-01.jpg", 1350, 1800, "aagman",
+    "Dhol-tasha",
+    "The dhol-tasha pathak playing beside the murti during the Aagman"),
+  g("pathak-bw-02", "/images/pathak-bw-02.jpg", 1013, 1800, "aagman",
+    "The tasha",
+    "A tasha raised beside the murti during the procession"),
+  g("aagman-03", "/images/aagman-03.jpg", 1013, 1800, "aagman",
     "Volunteers of the mandal",
-    "Mandal volunteers accompanying the procession through the street"),
-  g("heritage-main", "/images/heritage-main.jpg", 1920, 1080, "aagman",
-    "Through Chembur",
-    "The Aagman procession moving beneath the Chembur flyover"),
-  g("pathak-bw-01", "/images/pathak-bw-01.jpg", 1920, 1080, "aagman",
-    "Before it begins",
-    "Members of the pathak gathered before the procession begins"),
-  g("pathak-bw-02", "/images/pathak-bw-02.jpg", 1920, 1080, "aagman",
-    "The pathak assembles",
-    "The pathak assembled at the start of the Aagman Sohala"),
-  g("decor-01", "/images/decor-01.jpg", 1920, 1080, "aagman",
-    "The mandap at night",
-    "The mandal's decorated mandap illuminated at night"),
+    "Mandal volunteers in their red kurtas walking the lane ahead of the float"),
+  g("heritage-main", "/images/heritage-main.jpg", 1013, 1800, "aagman",
+    "The lane waits",
+    "The neighbourhood lane at night, lined with devotees as the procession approaches"),
+  g("decor-01", "/images/decor-01.jpg", 1600, 900, "aagman",
+    "The mandap canopy",
+    "The draped canopy and strings of light above the mandal's mandap"),
 
-  // ---------- Sthapana Puja (authentic) ----------
-  g("puja-01", "/images/puja-01.jpg", 1920, 1080, "puja",
-    "Sthapana",
-    "The murti installed for the Sthapana Puja"),
-  g("puja-02", "/images/puja-02.jpg", 1920, 1080, "puja",
-    "An offering",
-    "A devotee making an offering at the feet of the murti"),
-  g("puja-03", "/images/puja-03.jpg", 1920, 1080, "puja",
+  // ---------- Sthapana Puja & Mahaprasad ----------
+  g("puja-01", "/images/puja-01.jpg", 1013, 1800, "puja",
     "The aarti",
-    "A young devotee performing the aarti before the murti"),
-  g("puja-05", "/images/puja-05.jpg", 1920, 1080, "puja",
-    "The painted eye",
-    "Close detail of the murti's painted eye during the puja"),
-  g("puja-06", "/images/puja-06.jpg", 1920, 1080, "puja",
-    "Mahaprasad",
-    "Mahaprasad offered to devotees during the puja"),
-
-  // ---------- Community (authentic) ----------
-  g("puja-04", "/images/puja-04.jpg", 1920, 1080, "community",
+    "The aarti thali and incense smoke rising before the murti"),
+  g("pathak-bw-01", "/images/pathak-bw-01.jpg", 1012, 1800, "puja",
+    "The rite",
+    "Members of the mandal performing the puja before the murti"),
+  g("puja-02", "/images/puja-02.jpg", 1600, 900, "puja",
     "Folded hands",
-    "Devotees with folded hands during the aarti"),
-  g("community-01", "/images/community-01.jpg", 1920, 1080, "community",
-    "The community gathers",
-    "The gathered community of Chembur during the Sthapana Puja"),
-  g("community-02", "/images/community-02.jpg", 1920, 1080, "community",
-    "At prayer",
-    "Devotees of the mandal at prayer"),
-  g("community-03", "/images/community-03.jpg", 1920, 1080, "community",
-    "The next generation",
-    "A child watching the mandal's procession pass"),
-  g("crowd-01", "/images/crowd-01.jpg", 1920, 1080, "community",
-    "The street celebrates",
-    "Devotees celebrating in the street as the procession passes"),
-  g("crowd-02", "/images/crowd-02.jpg", 1920, 1080, "community",
-    "Hands raised",
-    "Devotees with raised hands during the Aagman celebration"),
+    "Devotees standing with folded hands through the aarti"),
+  g("puja-05", "/images/puja-05.jpg", 1800, 1350, "puja",
+    "Darshan, together",
+    "A family standing before the murti in the mandap"),
+  g("puja-03", "/images/puja-03.jpg", 1013, 1800, "puja",
+    "Mahaprasad",
+    "The Mahaprasad being cooked in the mandal's kitchen"),
+  g("puja-04", "/images/puja-04.jpg", 1013, 1800, "puja",
+    "Served to every devotee",
+    "A thali of Mahaprasad being served"),
+  g("puja-06", "/images/puja-06.jpg", 1013, 1800, "puja",
+    "The mandal's kitchen",
+    "Volunteers working the vessels that feed the Mahaprasad"),
 
-  // ---------- Placeholders: no mandal footage yet ----------
-  g("visarjan-01", "/images/visarjan-01.jpg", 1280, 918, "visarjan",
-    "Visarjan",
-    "An immersion procession entering the sea during Ganpati Visarjan", true),
-  g("navratri-01", "/images/navratri-01.jpg", 1920, 1080, "navratri",
-    "The Garba circle",
-    "Dancers moving in a wide Garba circle on a decorated festival ground", true),
-  g("navratri-02", "/images/navratri-02.jpg", 1920, 1280, "navratri",
-    "Dancing Garba",
-    "Devotees dancing Garba under strings of festival lights", true),
-  g("navratri-03", "/images/navratri-03.jpg", 1920, 1280, "navratri",
-    "A gathering of thousands",
-    "A large crowd gathered for Navratri Garba at night", true),
-  g("navratri-04", "/images/navratri-04.jpg", 1920, 3008, "navratri",
-    "Traditional dress",
-    "A line of dancers in traditional red Garba dress", true),
-  g("navratri-05", "/images/navratri-05.jpg", 1920, 1280, "navratri",
-    "The ground, decorated",
-    "A Navratri ground decorated with canopies of hanging lights at dusk", true),
-  g("navratri-06", "/images/navratri-06.jpg", 1024, 582, "navratri",
-    "Mirror-work",
-    "Close view of traditional mirror-work Garba attire", true),
+  // ---------- Community ----------
+  g("community-01", "/images/community-01.jpg", 1800, 1350, "community",
+    "The volunteers",
+    "The mandal's volunteers in their red t-shirts, gathered before the murti"),
+  g("community-04", "/images/community-04.jpg", 1800, 1350, "community",
+    "The whole team",
+    "Mandal volunteers seated together in front of the murti"),
+  g("community-02", "/images/community-02.jpg", 1800, 1350, "community",
+    "The neighbourhood",
+    "A gathering of the mandal's members and families under the mandap lights"),
+  g("community-03", "/images/community-03.jpg", 1800, 1350, "community",
+    "Elders of the mandal",
+    "Senior members of the mandal standing together beside the murti"),
+  g("crowd-01", "/images/crowd-01.jpg", 1013, 1800, "community",
+    "The street celebrates",
+    "Volunteers with their arms raised in the lane during the Aagman"),
+  g("crowd-02", "/images/crowd-02.jpg", 1350, 1800, "community",
+    "The next generation",
+    "Three young volunteers of the mandal in front of the murti"),
+
+  // ---------- Navratri 2026 ----------
+  g("navratri-01", "/images/navratri-01.jpg", 1013, 1800, "navratri",
+    "The lane, dancing",
+    "The lane filled with Garba dancers, the lit stage at the far end"),
+  g("navratri-04", "/images/navratri-04.jpg", 1013, 1800, "navratri",
+    "Nine nights",
+    "A crowd gathered under the strings of light for the Navratri Utsav"),
+  g("navratri-05", "/images/navratri-05.jpg", 1013, 1800, "navratri",
+    "Dandiya Raas",
+    "Dandiya sticks meeting under the coloured lights of the Utsav"),
+  g("navratri-02", "/images/navratri-02.jpg", 1013, 1800, "navratri",
+    "Dressed for the Utsav",
+    "Families in festival dress walking the decorated lane during Navratri"),
+  g("navratri-06", "/images/navratri-06.jpg", 1013, 1800, "navratri",
+    "The stage",
+    "The decorated Navratri stage lit in blue and green"),
+  g("navratri-03", "/images/navratri-03.jpg", 1013, 1800, "navratri",
+    "The lane at night",
+    "The lane strung end to end with lights during the Navratri Utsav"),
+
+  // ---------- Visarjan ----------
+  // Authentic 2026 procession photography, standing in until the Visarjan
+  // itself is photographed. The caption claims nothing it cannot support.
+  g("visarjan-01", "/images/visarjan-01.jpg", 1013, 1800, "visarjan",
+    "The float, by night",
+    "The mandal's float lit against the night sky during the 2026 procession",
+    true),
+];
+
+/**
+ * The mandal's own footage from 2026, transcoded for the web and served
+ * from this site. Posters are the real opening frame of each clip.
+ */
+const clip = (slug, caption, occasion) => ({
+  id: slug,
+  src: `/video/${slug}.mp4`,
+  poster: `/video/${slug}.jpg`,
+  caption,
+  occasion,
+});
+
+export const mandalClips = [
+  clip("aagman-float", "The float arrives", "Aagman 2026"),
+  clip("aagman-dhol", "Dhol-tasha", "Aagman 2026"),
+  clip("aagman-flare", "A flare in the lane", "Aagman 2026"),
+  clip("utsav-sparklers", "Sparklers before Bappa", "Ganesh Utsav 2026"),
+  clip("utsav-aarti", "The aarti", "Ganesh Utsav 2026"),
+  clip("utsav-mahaprasad", "Mahaprasad", "Ganesh Utsav 2026"),
+  clip("navratri-garba", "Garba fills the lane", "Navratri 2026"),
+  clip("navratri-dandiya", "Dandiya Raas", "Navratri 2026"),
+  clip("navratri-crowd", "Nine nights", "Navratri 2026"),
 ];
 
 export const galleryVideos = [

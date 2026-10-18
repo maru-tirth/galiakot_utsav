@@ -81,7 +81,7 @@ export default function HistoryPage() {
               <div className="relative aspect-4/5 overflow-hidden rounded-sm shadow-[var(--shadow-deep)]">
                 <Image
                   src="/images/idol-detail-02.jpg"
-                  alt="The mandal's murti draped in a red and gold shela during the procession"
+                  alt="A hand of the murti's backdrop holding a small damru"
                   fill
                   sizes="(max-width: 1024px) 92vw, 42vw"
                   className="object-cover"
@@ -100,7 +100,7 @@ export default function HistoryPage() {
               <div className="relative aspect-square overflow-hidden rounded-sm">
                 <Image
                   src="/images/puja-04.jpg"
-                  alt="Devotees with folded hands during the aarti"
+                  alt="A thali of Mahaprasad being served to devotees"
                   fill
                   sizes="21vw"
                   className="object-cover"
@@ -109,7 +109,7 @@ export default function HistoryPage() {
               <div className="relative aspect-square overflow-hidden rounded-sm">
                 <Image
                   src="/images/aagman-04.jpg"
-                  alt="The dhol-tasha pathak playing during the Aagman Sohala"
+                  alt="A flare held up in the lane during the night procession"
                   fill
                   sizes="21vw"
                   className="object-cover"

@@ -4,6 +4,7 @@ import { site } from "@/data/site";
 import { galleryVideos } from "@/data/gallery";
 import PageHero from "@/components/layout/PageHero";
 import MediaGallery from "@/components/gallery/MediaGallery";
+import ClipReel from "@/components/gallery/ClipReel";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 
@@ -33,9 +34,26 @@ export default function GalleryPage() {
         <div className="mx-auto max-w-[1400px] px-4 sm:px-8">
           <SectionHeading
             as="h2"
+            eyebrow="From the Utsav"
+            title="Moments from 2026"
+            lede="Filmed by the mandal during Ganesh Utsav and Navratri 2026."
+            align="center"
+            divider
+          />
+
+          <ClipReel />
+        </div>
+      </section>
+
+      {/* The longer films keep the same dark ground, divided by a hairline
+          so the two video sections read as separate shelves. */}
+      <section className="on-dark surface-dark border-t border-gold/15 py-20 lg:py-24">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-8">
+          <SectionHeading
+            as="h2"
             eyebrow="Festival Films"
             title="Watch the Utsav"
-            lede="Films of our celebrations, produced by Beyond Thought Films."
+            lede="Longer films of our celebrations, produced by Beyond Thought Films."
             align="center"
             divider
           />

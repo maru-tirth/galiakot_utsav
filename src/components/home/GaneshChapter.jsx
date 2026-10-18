@@ -94,9 +94,9 @@ export function GaneshChapter() {
             <div className="relative overflow-hidden rounded-sm">
               <Image
                 src="/images/darshan-idol.jpg"
-                alt="Close view of the mandal's Ganpati murti, crowned in gold and framed by lotus garlands"
-                width={1920}
-                height={1080}
+                alt="Close view of the mandal's Ganpati murti — the painted eyes, the trishul tilak and the Om on the forehead"
+                width={1800}
+                height={1350}
                 sizes="(max-width: 1024px) 92vw, 46vw"
                 className="h-full w-full object-cover"
               />
